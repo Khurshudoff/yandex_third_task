@@ -191,10 +191,10 @@ const smartHouse = function(input) {
 
     result.consumedEnergy.value = minPowerArray.reduce((a, b) => a + b, 0);
     for (const index in devicesCanStart) {
-        result.consumedEnergy[devicesCanStart[index][0]] = minPowerArray[index];
+        result.consumedEnergy.devices[devicesCanStart[index][0]] = minPowerArray[index];
     }
 
-    return devicesCanStart;
+    return result;
 };
 
 console.log(smartHouse(inputData));
